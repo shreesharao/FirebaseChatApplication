@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+    <link rel="stylesheet" href="./content/bootstrap.css">
+    <link rel="stylesheet" href="./content/style.css">
+    <title> Firebase Chat app</title>
+</head>
+
+<body>
+    <div class="container-full">
+        <div id='welcomeDiv' class="row" style='display:none'>
+            <div class="col-lg-12 text-center v-center">
+                <h1>Let's Chat > Login</h1>
+                <p class="lead">Sign in with your Google account below.</p>
+                <br>
+                <form class="col-lg-12">
+                    <div class="input-group input-group-lg col-sm-offset-4 col-sm-4">
+                        <button id='googleLogin' class="btn btn-lg btn-primary" type="button">Sign in with Google</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- /row -->
+        <br><br>
+
+        <div id='chatDiv' class="container" style='display:none'>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <span class="glyphicon glyphicon-comment"></span> Chat
+                            <div class="btn-group pull-right">
+                                <button id='btnLogOff' title="Log out" type="button" class="btn btn-default btn-sm">
+                                    <span class="glyphicon glyphicon-off"></span>
+                                </button>
+                                <!--<ul class="dropdown-menu">
+                                    <li>
+                                        <a href="http://www.jquery2dotnet.com">
+                                            <span class="glyphicon glyphicon-refresh">
+                                            </span>Refresh
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.jquery2dotnet.com">
+                                            <span class="glyphicon glyphicon-ok-sign">
+                                            </span>Available
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.jquery2dotnet.com">
+                                            <span class="glyphicon glyphicon-remove">
+                                            </span>Busy
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.jquery2dotnet.com">
+                                            <span class="glyphicon glyphicon-time"></span>
+                                            Away
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="http://www.jquery2dotnet.com">
+                                            <span class="glyphicon glyphicon-off"></span>
+                                            Sign Out
+                                        </a>
+                                    </li>
+                                </ul>-->
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <ul id='chat' class="chat"></ul>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="input-group">
+                                <input id="txtbox" type="text" class="form-control input-sm" placeholder="Type your message here...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-warning btn-sm" id="send">
+                                        Send
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /container full -->
+    <script src="./scripts/index.js"></script>
+</body>
+
+</html>
